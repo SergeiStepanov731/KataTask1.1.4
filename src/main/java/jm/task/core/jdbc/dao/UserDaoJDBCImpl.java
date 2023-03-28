@@ -2,9 +2,7 @@ package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
-import org.hibernate.mapping.PrimaryKey;
 
-import java.nio.channels.ScatteringByteChannel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -69,8 +67,7 @@ public class UserDaoJDBCImpl implements UserDao {
             e.printStackTrace();
 
         } finally {
-            System.out.println("Пользователь успешно добавлен:\nИмя: " + name +
-                    "\nФамилия: " + lastName + "\nВозраст: " + age + "\n");
+            System.out.println("Пользователь " + name + " добавлен в базу данных.");
         }
 
     }
@@ -128,9 +125,6 @@ public class UserDaoJDBCImpl implements UserDao {
         } finally {
             System.out.println("Таблица была очищена");
         }
-
-
-
 
     }
 }
